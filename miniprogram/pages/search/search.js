@@ -26,29 +26,33 @@ Page({
     const db = wx.cloud.database({ 
       env: 'abc191105200308-2gmygyg076120e22' });
   //获取数据列表1数据
-    const loseThing1 = await db.collection('loseThing')
-    .where({
+      try{
+        const loseThing1 = await db.collection('loseThing')
+        .where({
+              title: db.RegExp({
+                regexp: this.data.searchKey,
+                options: 'i'
+              })
+            })
+        .get();
+        //获取数据列表2数据
+        const seekThing2 = await db.collection('seekThing')
+        .where({
           title: db.RegExp({
             regexp: this.data.searchKey,
             options: 'i'
           })
         })
-    .get();
-     //获取数据列表2数据
-    const seekThing2 = await db.collection('seekThing')
-    .where({
-      title: db.RegExp({
-        regexp: this.data.searchKey,
-        options: 'i'
-      })
-    })
-    .get();
-    //我登不上你的appid无法拿到数据，下行是一个简要的示例，目的是将两个库的数据处理为一个数组（或其他形式），需要你随机应变
-    const queryList = [...loseThing1.data,...seekThing2.data]
-    //赋值给query
-    this.setData({
-      query:queryList 
-      });
+        .get();
+        //我登不上你的appid无法拿到数据，下行是一个简要的示例，目的是将两个库的数据处理为一个数组（或其他形式），需要你随机应变
+        const queryList = [...loseThing1.data,...seekThing2.data]
+        //赋值给query
+        this.setData({
+          query:queryList 
+          });
+      }catch(err){
+        console.log(err)
+      }
     },
 
   Navigate1(e){
