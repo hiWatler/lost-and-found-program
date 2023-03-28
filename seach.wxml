@@ -1,0 +1,78 @@
+<!--pages/hall/seach/seach.wxml-->
+<!--<text>pages/hall/seach/seach.wxml</text>-->
+<!--<view class="search-view-container">
+  <view class="search-view-top">
+    <van-search
+      value="{{ searchValue }}"
+      placeholder="请输入搜索关键词"
+      use-action-slot
+      bind:change="onChange"/>
+      <view slot="action" bind:tap="startSearch">搜索</view></van-search>
+
+    
+  </view>
+</view>-->
+
+<!--<view class="container">
+  <view class="search-box">
+    <input class="search-input" type="text" placeholder="搜索" value="{{inputVal}}" bindinput="onInput" />
+    <button class="search-btn" bindtap="onSearch">搜索</button>
+    <button class="clear-btn" bindtap="onClear">清除</button>
+  </view>
+  <view class="result-box">
+    <block wx:if="{{searchResult.length}}">
+      <view wx:for="{{searchResult}}" wx:key="index">{{item.name}}</view>
+    </block>
+    <block wx:else>
+      <view>暂无搜索结果</view>
+    </block>
+  </view>
+</view>-->
+<!--<view class="search-container">
+  <view class="search-wrapper">
+    <input class="search-input" type="text" placeholder="请输入关键词" bindinput="onInput" value="{{inputVal}}"/>
+    <button class="search-button" type="primary" bindtap="onSearch">搜索</button>
+    <button class="clear-button" type="primary" size="mini" bindtap="onClear">清空</button>
+  </view>
+  <view class="result-wrapper">
+    <view wx:for="{{searchResult}}" wx:key="{{index}}">
+      <text>名称：{{item.name}}</text>
+      <text>类别：{{item.category}}</text>
+      <text>位置：{{item.location}}</text>
+    </view>
+  </view>
+</view>-->
+<!--<view class="sousuokuang">
+    <view class="sousuo">
+        <view class="shurukuang">
+            <input type="text" placeholder="搜索" value="" bindinput="GetSearchInput"></input>
+        </view>
+        <view class="sousuo_anniu" bindtap="ToSearch">
+            <text>搜索</text>
+            <icon type="search" size="20"></icon>
+        </view>
+    </view>
+</view>
+<scroll-view scroll-y class="scrollPage">
+-->
+
+
+<view class="container">
+  <view class="input-wrapper">
+    <input class="search-input" placeholder="请输入搜索关键字" bindinput="onInput" />
+    <button class="search-button" bindtap="onSearch">搜索</button>
+  </view>
+  <view class="result-wrapper">
+    <block wx:if="{{ searchResults.length > 0 }}">
+      <block wx:for="{{ searchResults }}" wx:key="{{ index }}">
+        <button class="result-item" bindtap="Navigate1">{{ item.title }}</button>
+        <button class="result-item" bindtap="Navigate1">{{ item.description }}</button>
+      </block>
+    </block>
+    <block wx:if="{{ searchResults.length == 0 }}">
+      <view class="no-results">暂无搜索结果</view>
+    </block>
+  </view>
+</view>
+
+

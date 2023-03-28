@@ -1,0 +1,146 @@
+
+/*.search-view-container{
+  position: absolute;
+  top:0px;
+  left:0;
+  bottom:0;
+  right:0;
+  background-color: #117fff;
+}
+
+.search-view-top{
+  position:center;
+  width:100px;
+  height:40px;
+  margin:white;
+}*/
+
+/*.search-container{
+  position:center;
+  width:100px;
+  height:40px;
+  margin-left:40px;
+  margin:grey;
+}
+.result-wrapper{
+  position:center;
+}
+.clear-button{
+  width:100px;
+  margin-right:30px;
+  margin-top: 40px;
+}
+.search-wrapper{
+  width: 500rpx;
+  height: 80rpx;
+  margin:grey;
+}*/
+/*
+.sousuokuang {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.sousuo {
+  width: 92%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.shurukuang {
+  width: 80%;
+  height: 64rpx;
+  border-radius: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+.shurukuang input {
+  width: 90%;
+  height: 100%;
+  font-size: 32rpx;
+}
+.sousuo_anniu {
+  width: 20%;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sousuo_anniu text {
+  font-size: 30rpx;
+}*/
+
+/*.title {
+  font-size: 45rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15rpx;
+  margin-bottom: -5px;
+}
+
+.action {
+  width: 20%;
+  height: 10px;
+  margin-left: 50;
+}
+
+.view {
+  margin-left: 20;
+  padding-top: 20rpx;
+  padding-bottom: 0rpx;
+  height:30rpx;
+}
+
+.header_view_hide {
+  display: none;
+}
+
+.header_view_show {
+  display: block;
+}
+.cu-btn bg-blue shadow{
+  margin-left:30rpx;
+  color: aqua;
+}*/
+/*In the search folder, create a new file called search.wxss. Copy and paste the following code into this file:*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.search-input {
+  height: 80rpx;
+  width: 350rpx;
+  padding: 20rpx;
+  font-size: 30rpx;
+  border: none;
+  margin-left: 150rpx;
+  border-radius: 10rpx;
+  background-color: #f1f1f1;
+}
+
+.search-button {
+  height: 80rpx;
+  width: 200rpx;
+  margin-left: 20rpx;
+  font-size:30rpx;
+}
